@@ -1,0 +1,35 @@
+id,user_id,feedback_text,rating,sentiment,sentiment_score,category,created_at
+75,14,Really useful. Will recommend to friends.,4,positive,0.3,value,2026-05-17 08:45:04.294051+05:30
+76,16,Interview questions need more variety but overall great.,4,positive,0.433,features,2026-05-04 19:28:28.512417+05:30
+77,19,Really useful. Will recommend to friends.,5,positive,0.3,value,2026-05-19 12:56:12.362687+05:30
+78,20,Excellent tool. Used it for 3 job applications already.,4,positive,1,value,2026-06-05 11:56:54.530219+05:30
+79,21,The keyword matching is spot on. Got 2 interviews.,5,neutral,0,accuracy,2026-05-12 12:18:22.706439+05:30
+80,24,The keyword matching is spot on. Got 2 interviews.,4,neutral,0,accuracy,2026-06-09 17:39:57.219811+05:30
+81,30,Excellent tool. Used it for 3 job applications already.,3,positive,1,value,2026-05-20 17:45:27.133524+05:30
+82,31,Excellent tool. Used it for 3 job applications already.,4,positive,1,value,2026-05-30 01:29:57.02425+05:30
+83,34,Interview questions need more variety but overall great.,3,positive,0.433,features,2026-06-17 11:39:11.357503+05:30
+84,35,The keyword matching is spot on. Got 2 interviews.,3,neutral,0,accuracy,2026-06-05 23:06:36.109856+05:30
+85,39,The keyword matching is spot on. Got 2 interviews.,5,neutral,0,accuracy,2026-05-30 10:55:10.06811+05:30
+86,42,Interview questions need more variety but overall great.,3,positive,0.433,features,2026-06-11 21:58:22.675741+05:30
+87,43,Interview questions need more variety but overall great.,4,positive,0.433,features,2026-06-06 11:13:44.810569+05:30
+88,89,Too slow to load. Gave up after waiting.,2,negative,-0.3,performance,2026-05-15 20:33:37.407038+05:30
+89,94,Not relevant to my industry. Skill suggestions were off.,2,negative,-0.2,features,2026-05-22 10:23:21.854165+05:30
+90,95,Did not find it useful. Uninstalled.,1,positive,0.3,value,2026-05-20 21:31:39.803137+05:30
+91,96,Score does not seem accurate for my resume.,1,positive,0.4,accuracy,2026-06-01 20:19:41.453041+05:30
+92,97,Score does not seem accurate for my resume.,3,positive,0.4,accuracy,2026-05-24 04:22:59.99095+05:30
+93,76,Not relevant to my industry. Skill suggestions were off.,3,negative,-0.2,features,2026-05-22 10:44:05.20444+05:30
+94,77,Did not find it useful. Uninstalled.,2,positive,0.3,value,2026-05-14 18:09:31.364021+05:30
+95,87,Confusing interface. Could not figure out next steps.,1,neutral,-0.15,onboarding,2026-05-21 08:17:39.8176+05:30
+96,91,Confusing interface. Could not figure out next steps.,3,neutral,-0.15,onboarding,2026-05-11 00:37:38.332051+05:30
+97,92,Not relevant to my industry. Skill suggestions were off.,2,negative,-0.2,features,2026-05-13 21:25:24.174976+05:30
+1,1,The ATS score really helped me understand what recruiters see. Would love more detailed keyword suggestions.,5,positive,0.4,features,2026-05-23 09:41:43.815737+05:30
+2,2,Score seems too low for my resume. Not sure the matching is accurate.,2,neutral,0.05,accuracy,2026-05-27 09:41:43.815737+05:30
+3,3,Signed up but could not figure out what to do next. The UI is confusing.,1,neutral,-0.15,onboarding,2026-06-01 09:41:43.815737+05:30
+4,4,Excellent tool. The skill gap section is very useful for targeted job applications.,5,positive,0.695,features,2026-06-06 09:41:43.815737+05:30
+5,5,Works fine but the analysis takes too long to load.,3,neutral,0.183,performance,2026-06-11 09:41:43.815737+05:30
+6,7,Good concept. Interview questions feature needs more variety.,4,positive,0.6,features,2026-06-16 09:41:43.815737+05:30
+7,8,Really liked the breakdown by job description. Premium seems worth it.,5,positive,0.45,value,2026-06-18 09:41:43.815737+05:30
+9,11,This is a test feedback from API testing.,4,neutral,0,general,2026-06-20 10:08:32.186871+05:30
+10,12,nice but still i need more clarity,4,positive,0.55,features,2026-06-21 10:45:02.358554+05:30
+11,12,nice i loved it and really enjoyed,4,positive,0.6,general,2026-06-21 11:02:10.410214+05:30
+12,12,it is so good and works well,4,positive,0.7,value,2026-06-21 16:14:11.971989+05:30

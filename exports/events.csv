@@ -1,0 +1,469 @@
+id,user_id,event_name,event_properties,page,created_at
+1,1,signup_completed,"{""method"": ""email""}",/signup,2026-05-21 09:41:43.807495+05:30
+2,1,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 245}",/upload,2026-05-21 09:43:43.807495+05:30
+3,1,ats_analysis_completed,"{""ats_score"": 78, ""job_title"": ""Product Manager""}",/results,2026-05-21 09:45:43.807495+05:30
+4,1,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-21 09:47:43.807495+05:30
+5,1,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-21 09:49:43.807495+05:30
+6,1,premium_clicked,"{""source"": ""skill_gap_page""}",/pricing,2026-05-21 09:51:43.807495+05:30
+7,1,return_visit,"{""days_since_last_visit"": 10}",/upload,2026-05-31 09:41:43.807495+05:30
+8,1,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 312}",/upload,2026-05-31 09:42:43.807495+05:30
+9,1,ats_analysis_completed,"{""ats_score"": 85, ""job_title"": ""Senior PM""}",/results,2026-05-31 09:44:43.807495+05:30
+10,2,signup_completed,"{""method"": ""email""}",/signup,2026-05-26 09:41:43.807495+05:30
+11,2,resume_uploaded,"{""file_type"": ""docx"", ""file_size_kb"": 180}",/upload,2026-05-26 09:44:43.807495+05:30
+12,2,ats_analysis_completed,"{""ats_score"": 55, ""job_title"": ""Data Analyst""}",/results,2026-05-26 09:46:43.807495+05:30
+13,2,return_visit,"{""days_since_last_visit"": 13}",/upload,2026-06-08 09:41:43.807495+05:30
+14,3,signup_completed,"{""method"": ""google""}",/signup,2026-05-31 09:41:43.807495+05:30
+15,4,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-05 09:41:43.807495+05:30
+16,4,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 290}",/upload,2026-06-05 09:43:43.807495+05:30
+17,4,ats_analysis_completed,"{""ats_score"": 91, ""job_title"": ""Growth Manager""}",/results,2026-06-05 09:45:43.807495+05:30
+18,4,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-06-05 09:47:43.807495+05:30
+19,4,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-05 09:49:43.807495+05:30
+20,4,premium_clicked,"{""source"": ""results_page""}",/pricing,2026-06-05 09:51:43.807495+05:30
+21,4,return_visit,"{""days_since_last_visit"": 10}",/upload,2026-06-15 09:41:43.807495+05:30
+22,4,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 275}",/upload,2026-06-15 09:42:43.807495+05:30
+23,5,signup_completed,"{""method"": ""email""}",/signup,2026-06-10 09:41:43.807495+05:30
+24,5,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 198}",/upload,2026-06-10 09:46:43.807495+05:30
+25,6,signup_completed,"{""method"": ""email""}",/signup,2026-06-12 09:41:43.807495+05:30
+26,7,signup_completed,"{""method"": ""google""}",/signup,2026-06-15 09:41:43.807495+05:30
+27,7,resume_uploaded,"{""file_type"": ""docx"", ""file_size_kb"": 220}",/upload,2026-06-15 09:43:43.807495+05:30
+28,7,ats_analysis_completed,"{""ats_score"": 63, ""job_title"": ""BA""}",/results,2026-06-15 09:45:43.807495+05:30
+29,8,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-17 09:41:43.807495+05:30
+30,8,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 310}",/upload,2026-06-17 09:42:43.807495+05:30
+31,8,ats_analysis_completed,"{""ats_score"": 88, ""job_title"": ""APM""}",/results,2026-06-17 09:44:43.807495+05:30
+32,8,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-17 09:46:43.807495+05:30
+33,8,premium_clicked,"{""source"": ""skill_gap_page""}",/pricing,2026-06-17 09:48:43.807495+05:30
+34,9,signup_completed,"{""method"": ""email""}",/signup,2026-06-18 09:41:43.807495+05:30
+35,10,signup_completed,"{""method"": ""google""}",/signup,2026-06-19 09:41:43.807495+05:30
+36,10,resume_uploaded,"{""file_type"": ""pdf"", ""file_size_kb"": 255}",/upload,2026-06-19 09:44:43.807495+05:30
+37,11,feedback_submitted,"{""rating"": 4, ""feedback_length"": 41}",/feedback,2026-06-20 10:08:32.207944+05:30
+38,11,resume_uploaded,"{""file_type"": ""text/plain"", ""file_size_kb"": 0.22, ""filename"": ""test_resume.txt""}",/upload,2026-06-20 10:42:02.781322+05:30
+39,11,ats_analysis_completed,"{""ats_score"": 57.2, ""job_title"": ""Senior Product Manager"", ""missing_skills_count"": 2}",/results,2026-06-21 10:36:21.028301+05:30
+40,12,ats_analysis_completed,"{""ats_score"": 45.6, ""job_title"": ""data analyst"", ""missing_skills_count"": 8}",/results,2026-06-21 10:44:17.332667+05:30
+41,12,feedback_submitted,"{""rating"": 4, ""feedback_length"": 34}",/feedback,2026-06-21 10:45:02.393964+05:30
+42,12,ats_analysis_completed,"{""ats_score"": 63.4, ""job_title"": ""data analyst"", ""missing_skills_count"": 0}",/results,2026-06-21 11:01:34.227222+05:30
+43,12,feedback_submitted,"{""rating"": 4, ""feedback_length"": 34}",/feedback,2026-06-21 11:02:10.424932+05:30
+44,12,ats_analysis_completed,"{""ats_score"": 63.7, ""job_title"": ""product analyst"", ""missing_skills_count"": 0}",/results,2026-06-21 11:18:55.561126+05:30
+45,12,ats_analysis_completed,"{""ats_score"": 63.7, ""job_title"": ""data analyst"", ""missing_skills_count"": 0}",/results,2026-06-21 16:01:40.109521+05:30
+46,12,ats_analysis_completed,"{""ats_score"": 63.7, ""job_title"": ""product analyst"", ""missing_skills_count"": 0}",/results,2026-06-21 16:09:24.80743+05:30
+47,12,feedback_submitted,"{""rating"": 4, ""feedback_length"": 28}",/feedback,2026-06-21 16:14:12.10205+05:30
+48,13,ats_analysis_completed,"{""ats_score"": 63.7, ""job_title"": ""data anlayst"", ""missing_skills_count"": 0}",/results,2026-06-21 16:15:17.973188+05:30
+639,14,signup_completed,"{""method"": ""google""}",/signup,2026-05-09 08:45:04.294051+05:30
+640,15,signup_completed,"{""method"": ""google""}",/signup,2026-06-06 00:24:08.276257+05:30
+641,16,signup_completed,"{""method"": ""google""}",/signup,2026-04-26 19:28:28.512417+05:30
+642,17,signup_completed,"{""method"": ""email""}",/signup,2026-05-08 08:48:23.60626+05:30
+643,18,signup_completed,"{""method"": ""google""}",/signup,2026-05-24 03:43:41.590863+05:30
+644,19,signup_completed,"{""method"": ""email""}",/signup,2026-05-11 12:56:12.362687+05:30
+645,20,signup_completed,"{""method"": ""email""}",/signup,2026-05-28 11:56:54.530219+05:30
+646,21,signup_completed,"{""method"": ""linkedin""}",/signup,2026-05-04 12:18:22.706439+05:30
+647,22,signup_completed,"{""method"": ""google""}",/signup,2026-06-08 06:19:37.247583+05:30
+648,23,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-06 03:33:16.45359+05:30
+649,24,signup_completed,"{""method"": ""email""}",/signup,2026-06-01 17:39:57.219811+05:30
+650,25,signup_completed,"{""method"": ""google""}",/signup,2026-05-02 04:30:55.119966+05:30
+651,26,signup_completed,"{""method"": ""google""}",/signup,2026-05-05 08:15:59.738411+05:30
+652,27,signup_completed,"{""method"": ""google""}",/signup,2026-05-15 18:06:39.169964+05:30
+653,28,signup_completed,"{""method"": ""email""}",/signup,2026-04-29 02:54:03.33157+05:30
+654,29,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-03 07:06:56.244714+05:30
+655,30,signup_completed,"{""method"": ""google""}",/signup,2026-05-12 17:45:27.133524+05:30
+656,31,signup_completed,"{""method"": ""linkedin""}",/signup,2026-05-22 01:29:57.02425+05:30
+657,32,signup_completed,"{""method"": ""email""}",/signup,2026-05-01 18:18:27.446261+05:30
+658,33,signup_completed,"{""method"": ""google""}",/signup,2026-06-01 17:29:15.085009+05:30
+659,34,signup_completed,"{""method"": ""google""}",/signup,2026-06-09 11:39:11.357503+05:30
+660,35,signup_completed,"{""method"": ""linkedin""}",/signup,2026-05-28 23:06:36.109856+05:30
+661,36,signup_completed,"{""method"": ""linkedin""}",/signup,2026-05-01 16:01:18.666252+05:30
+662,37,signup_completed,"{""method"": ""email""}",/signup,2026-05-04 13:14:35.884198+05:30
+663,38,signup_completed,"{""method"": ""email""}",/signup,2026-05-27 13:48:43.335953+05:30
+664,39,signup_completed,"{""method"": ""google""}",/signup,2026-05-22 10:55:10.06811+05:30
+665,40,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-08 21:40:22.645793+05:30
+666,41,signup_completed,"{""method"": ""google""}",/signup,2026-05-21 02:39:55.09963+05:30
+667,42,signup_completed,"{""method"": ""linkedin""}",/signup,2026-06-03 21:58:22.675741+05:30
+668,43,signup_completed,"{""method"": ""email""}",/signup,2026-05-29 11:13:44.810569+05:30
+669,14,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 383}",/upload,2026-05-10 08:45:04.294051+05:30
+670,15,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 148}",/upload,2026-06-07 00:24:08.276257+05:30
+671,16,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 247}",/upload,2026-04-27 19:28:28.512417+05:30
+672,17,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 392}",/upload,2026-05-09 08:48:23.60626+05:30
+673,18,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 356}",/upload,2026-05-25 03:43:41.590863+05:30
+674,19,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 340}",/upload,2026-05-12 12:56:12.362687+05:30
+675,20,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 164}",/upload,2026-05-29 11:56:54.530219+05:30
+676,21,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 387}",/upload,2026-05-05 12:18:22.706439+05:30
+677,22,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 390}",/upload,2026-06-09 06:19:37.247583+05:30
+678,23,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 240}",/upload,2026-06-07 03:33:16.45359+05:30
+679,24,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 333}",/upload,2026-06-02 17:39:57.219811+05:30
+680,25,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 269}",/upload,2026-05-03 04:30:55.119966+05:30
+681,26,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 133}",/upload,2026-05-06 08:15:59.738411+05:30
+682,27,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 368}",/upload,2026-05-16 18:06:39.169964+05:30
+683,28,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 263}",/upload,2026-04-30 02:54:03.33157+05:30
+684,29,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 263}",/upload,2026-06-04 07:06:56.244714+05:30
+685,30,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 356}",/upload,2026-05-13 17:45:27.133524+05:30
+686,31,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 272}",/upload,2026-05-23 01:29:57.02425+05:30
+687,32,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 179}",/upload,2026-05-02 18:18:27.446261+05:30
+688,33,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 315}",/upload,2026-06-02 17:29:15.085009+05:30
+689,34,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 328}",/upload,2026-06-10 11:39:11.357503+05:30
+690,35,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 242}",/upload,2026-05-29 23:06:36.109856+05:30
+691,36,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 331}",/upload,2026-05-02 16:01:18.666252+05:30
+692,37,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 197}",/upload,2026-05-05 13:14:35.884198+05:30
+693,38,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 244}",/upload,2026-05-28 13:48:43.335953+05:30
+694,39,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 127}",/upload,2026-05-23 10:55:10.06811+05:30
+695,40,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 197}",/upload,2026-06-09 21:40:22.645793+05:30
+696,41,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 372}",/upload,2026-05-22 02:39:55.09963+05:30
+697,42,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 206}",/upload,2026-06-04 21:58:22.675741+05:30
+698,43,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 331}",/upload,2026-05-30 11:13:44.810569+05:30
+699,14,ats_analysis_completed,"{""ats_score"": 58, ""job_title"": ""Product Manager""}",/results,2026-05-10 08:55:04.294051+05:30
+700,15,ats_analysis_completed,"{""ats_score"": 85, ""job_title"": ""Product Manager""}",/results,2026-06-07 00:34:08.276257+05:30
+701,16,ats_analysis_completed,"{""ats_score"": 51, ""job_title"": ""Product Manager""}",/results,2026-04-27 19:38:28.512417+05:30
+702,17,ats_analysis_completed,"{""ats_score"": 69, ""job_title"": ""Product Manager""}",/results,2026-05-09 08:58:23.60626+05:30
+703,18,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Product Manager""}",/results,2026-05-25 03:53:41.590863+05:30
+704,19,ats_analysis_completed,"{""ats_score"": 69, ""job_title"": ""Product Manager""}",/results,2026-05-12 13:06:12.362687+05:30
+705,20,ats_analysis_completed,"{""ats_score"": 88, ""job_title"": ""Product Manager""}",/results,2026-05-29 12:06:54.530219+05:30
+706,21,ats_analysis_completed,"{""ats_score"": 82, ""job_title"": ""Product Manager""}",/results,2026-05-05 12:28:22.706439+05:30
+707,22,ats_analysis_completed,"{""ats_score"": 83, ""job_title"": ""Product Manager""}",/results,2026-06-09 06:29:37.247583+05:30
+708,23,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Product Manager""}",/results,2026-06-07 03:43:16.45359+05:30
+709,24,ats_analysis_completed,"{""ats_score"": 86, ""job_title"": ""Product Manager""}",/results,2026-06-02 17:49:57.219811+05:30
+710,25,ats_analysis_completed,"{""ats_score"": 71, ""job_title"": ""Product Manager""}",/results,2026-05-03 04:40:55.119966+05:30
+711,26,ats_analysis_completed,"{""ats_score"": 73, ""job_title"": ""Product Manager""}",/results,2026-05-06 08:25:59.738411+05:30
+712,27,ats_analysis_completed,"{""ats_score"": 57, ""job_title"": ""Product Manager""}",/results,2026-05-16 18:16:39.169964+05:30
+713,28,ats_analysis_completed,"{""ats_score"": 71, ""job_title"": ""Product Manager""}",/results,2026-04-30 03:04:03.33157+05:30
+714,29,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Product Manager""}",/results,2026-06-04 07:16:56.244714+05:30
+715,30,ats_analysis_completed,"{""ats_score"": 61, ""job_title"": ""Product Manager""}",/results,2026-05-13 17:55:27.133524+05:30
+716,31,ats_analysis_completed,"{""ats_score"": 82, ""job_title"": ""Product Manager""}",/results,2026-05-23 01:39:57.02425+05:30
+717,32,ats_analysis_completed,"{""ats_score"": 90, ""job_title"": ""Product Manager""}",/results,2026-05-02 18:28:27.446261+05:30
+718,33,ats_analysis_completed,"{""ats_score"": 81, ""job_title"": ""Product Manager""}",/results,2026-06-02 17:39:15.085009+05:30
+719,34,ats_analysis_completed,"{""ats_score"": 90, ""job_title"": ""Product Manager""}",/results,2026-06-10 11:49:11.357503+05:30
+720,35,ats_analysis_completed,"{""ats_score"": 61, ""job_title"": ""Product Manager""}",/results,2026-05-29 23:16:36.109856+05:30
+721,36,ats_analysis_completed,"{""ats_score"": 75, ""job_title"": ""Product Manager""}",/results,2026-05-02 16:11:18.666252+05:30
+722,37,ats_analysis_completed,"{""ats_score"": 60, ""job_title"": ""Product Manager""}",/results,2026-05-05 13:24:35.884198+05:30
+723,38,ats_analysis_completed,"{""ats_score"": 86, ""job_title"": ""Product Manager""}",/results,2026-05-28 13:58:43.335953+05:30
+724,39,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Product Manager""}",/results,2026-05-23 11:05:10.06811+05:30
+725,40,ats_analysis_completed,"{""ats_score"": 59, ""job_title"": ""Product Manager""}",/results,2026-06-09 21:50:22.645793+05:30
+726,41,ats_analysis_completed,"{""ats_score"": 85, ""job_title"": ""Product Manager""}",/results,2026-05-22 02:49:55.09963+05:30
+727,42,ats_analysis_completed,"{""ats_score"": 68, ""job_title"": ""Product Manager""}",/results,2026-06-04 22:08:22.675741+05:30
+728,43,ats_analysis_completed,"{""ats_score"": 62, ""job_title"": ""Product Manager""}",/results,2026-05-30 11:23:44.810569+05:30
+729,14,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-10 09:05:04.294051+05:30
+730,15,skill_gap_viewed,"{""skills_missing"": 4}",/skill-gap,2026-06-07 00:44:08.276257+05:30
+731,16,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-04-27 19:48:28.512417+05:30
+732,17,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-05-09 09:08:23.60626+05:30
+733,18,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-25 04:03:41.590863+05:30
+734,19,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-12 13:16:12.362687+05:30
+735,20,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-29 12:16:54.530219+05:30
+736,21,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-05 12:38:22.706439+05:30
+737,22,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-09 06:39:37.247583+05:30
+738,23,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-06-07 03:53:16.45359+05:30
+739,24,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-06-02 17:59:57.219811+05:30
+740,25,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-05-03 04:50:55.119966+05:30
+741,26,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-05-06 08:35:59.738411+05:30
+742,27,skill_gap_viewed,"{""skills_missing"": 4}",/skill-gap,2026-05-16 18:26:39.169964+05:30
+743,28,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-04-30 03:14:03.33157+05:30
+744,29,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-04 07:26:56.244714+05:30
+745,30,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-05-13 18:05:27.133524+05:30
+746,31,skill_gap_viewed,"{""skills_missing"": 4}",/skill-gap,2026-05-23 01:49:57.02425+05:30
+747,32,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-05-02 18:38:27.446261+05:30
+748,33,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-02 17:49:15.085009+05:30
+749,34,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-10 11:59:11.357503+05:30
+750,35,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-29 23:26:36.109856+05:30
+751,36,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-02 16:21:18.666252+05:30
+752,37,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-05 13:34:35.884198+05:30
+753,38,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-28 14:08:43.335953+05:30
+754,39,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-23 11:15:10.06811+05:30
+755,40,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-06-09 22:00:22.645793+05:30
+756,41,skill_gap_viewed,"{""skills_missing"": 1}",/skill-gap,2026-05-22 02:59:55.09963+05:30
+757,42,skill_gap_viewed,"{""skills_missing"": 2}",/skill-gap,2026-06-04 22:18:22.675741+05:30
+758,43,skill_gap_viewed,"{""skills_missing"": 3}",/skill-gap,2026-05-30 11:33:44.810569+05:30
+759,14,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-16 08:45:04.294051+05:30
+760,15,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-13 00:24:08.276257+05:30
+761,16,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-03 19:28:28.512417+05:30
+762,17,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-15 08:48:23.60626+05:30
+763,18,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-31 03:43:41.590863+05:30
+764,19,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-18 12:56:12.362687+05:30
+765,20,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-04 11:56:54.530219+05:30
+766,21,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-11 12:18:22.706439+05:30
+767,22,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 06:19:37.247583+05:30
+768,23,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-13 03:33:16.45359+05:30
+769,24,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-08 17:39:57.219811+05:30
+770,25,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-09 04:30:55.119966+05:30
+771,26,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-12 08:15:59.738411+05:30
+772,27,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-22 18:06:39.169964+05:30
+773,28,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-06 02:54:03.33157+05:30
+774,29,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-10 07:06:56.244714+05:30
+775,30,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-19 17:45:27.133524+05:30
+776,31,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-29 01:29:57.02425+05:30
+777,32,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-08 18:18:27.446261+05:30
+778,33,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-08 17:29:15.085009+05:30
+779,34,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-16 11:39:11.357503+05:30
+780,35,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-04 23:06:36.109856+05:30
+781,36,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-08 16:01:18.666252+05:30
+782,37,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-11 13:14:35.884198+05:30
+783,38,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-03 13:48:43.335953+05:30
+784,39,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-29 10:55:10.06811+05:30
+785,40,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 21:40:22.645793+05:30
+786,41,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-05-28 02:39:55.09963+05:30
+787,42,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-10 21:58:22.675741+05:30
+788,43,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-05 11:13:44.810569+05:30
+789,14,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 388}",/upload,2026-05-16 08:50:04.294051+05:30
+790,15,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 105}",/upload,2026-06-13 00:29:08.276257+05:30
+791,16,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 182}",/upload,2026-05-03 19:33:28.512417+05:30
+792,17,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 367}",/upload,2026-05-15 08:53:23.60626+05:30
+793,18,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 276}",/upload,2026-05-31 03:48:41.590863+05:30
+794,19,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 383}",/upload,2026-05-18 13:01:12.362687+05:30
+795,20,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 189}",/upload,2026-06-04 12:01:54.530219+05:30
+796,21,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 212}",/upload,2026-05-11 12:23:22.706439+05:30
+797,22,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 127}",/upload,2026-06-15 06:24:37.247583+05:30
+798,23,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 159}",/upload,2026-06-13 03:38:16.45359+05:30
+799,24,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 379}",/upload,2026-06-08 17:44:57.219811+05:30
+800,25,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 329}",/upload,2026-05-09 04:35:55.119966+05:30
+801,26,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 124}",/upload,2026-05-12 08:20:59.738411+05:30
+802,27,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 313}",/upload,2026-05-22 18:11:39.169964+05:30
+803,28,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 318}",/upload,2026-05-06 02:59:03.33157+05:30
+804,29,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 113}",/upload,2026-06-10 07:11:56.244714+05:30
+805,30,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 350}",/upload,2026-05-19 17:50:27.133524+05:30
+806,31,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 161}",/upload,2026-05-29 01:34:57.02425+05:30
+807,32,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 352}",/upload,2026-05-08 18:23:27.446261+05:30
+1042,102,signup_completed,"{""method"": ""google""}",/signup,2026-06-10 00:14:16.650901+05:30
+808,33,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 323}",/upload,2026-06-08 17:34:15.085009+05:30
+809,34,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 253}",/upload,2026-06-16 11:44:11.357503+05:30
+810,35,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 362}",/upload,2026-06-04 23:11:36.109856+05:30
+811,36,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 103}",/upload,2026-05-08 16:06:18.666252+05:30
+812,37,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 160}",/upload,2026-05-11 13:19:35.884198+05:30
+813,38,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 293}",/upload,2026-06-03 13:53:43.335953+05:30
+814,39,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 359}",/upload,2026-05-29 11:00:10.06811+05:30
+815,40,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 156}",/upload,2026-06-15 21:45:22.645793+05:30
+816,41,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 179}",/upload,2026-05-28 02:44:55.09963+05:30
+817,42,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 237}",/upload,2026-06-10 22:03:22.675741+05:30
+818,43,resume_uploaded,"{""file_type"": ""application/pdf"", ""file_size_kb"": 196}",/upload,2026-06-05 11:18:44.810569+05:30
+819,14,ats_analysis_completed,"{""ats_score"": 70, ""job_title"": ""Senior PM""}",/results,2026-05-16 09:00:04.294051+05:30
+820,15,ats_analysis_completed,"{""ats_score"": 81, ""job_title"": ""Senior PM""}",/results,2026-06-13 00:39:08.276257+05:30
+821,16,ats_analysis_completed,"{""ats_score"": 81, ""job_title"": ""Senior PM""}",/results,2026-05-03 19:43:28.512417+05:30
+822,17,ats_analysis_completed,"{""ats_score"": 67, ""job_title"": ""Senior PM""}",/results,2026-05-15 09:03:23.60626+05:30
+823,18,ats_analysis_completed,"{""ats_score"": 86, ""job_title"": ""Senior PM""}",/results,2026-05-31 03:58:41.590863+05:30
+824,19,ats_analysis_completed,"{""ats_score"": 85, ""job_title"": ""Senior PM""}",/results,2026-05-18 13:11:12.362687+05:30
+825,20,ats_analysis_completed,"{""ats_score"": 82, ""job_title"": ""Senior PM""}",/results,2026-06-04 12:11:54.530219+05:30
+826,21,ats_analysis_completed,"{""ats_score"": 70, ""job_title"": ""Senior PM""}",/results,2026-05-11 12:33:22.706439+05:30
+827,22,ats_analysis_completed,"{""ats_score"": 67, ""job_title"": ""Senior PM""}",/results,2026-06-15 06:34:37.247583+05:30
+828,23,ats_analysis_completed,"{""ats_score"": 66, ""job_title"": ""Senior PM""}",/results,2026-06-13 03:48:16.45359+05:30
+829,24,ats_analysis_completed,"{""ats_score"": 73, ""job_title"": ""Senior PM""}",/results,2026-06-08 17:54:57.219811+05:30
+830,25,ats_analysis_completed,"{""ats_score"": 75, ""job_title"": ""Senior PM""}",/results,2026-05-09 04:45:55.119966+05:30
+831,26,ats_analysis_completed,"{""ats_score"": 80, ""job_title"": ""Senior PM""}",/results,2026-05-12 08:30:59.738411+05:30
+832,27,ats_analysis_completed,"{""ats_score"": 69, ""job_title"": ""Senior PM""}",/results,2026-05-22 18:21:39.169964+05:30
+833,28,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Senior PM""}",/results,2026-05-06 03:09:03.33157+05:30
+834,29,ats_analysis_completed,"{""ats_score"": 79, ""job_title"": ""Senior PM""}",/results,2026-06-10 07:21:56.244714+05:30
+835,30,ats_analysis_completed,"{""ats_score"": 87, ""job_title"": ""Senior PM""}",/results,2026-05-19 18:00:27.133524+05:30
+836,31,ats_analysis_completed,"{""ats_score"": 68, ""job_title"": ""Senior PM""}",/results,2026-05-29 01:44:57.02425+05:30
+837,32,ats_analysis_completed,"{""ats_score"": 88, ""job_title"": ""Senior PM""}",/results,2026-05-08 18:33:27.446261+05:30
+838,33,ats_analysis_completed,"{""ats_score"": 64, ""job_title"": ""Senior PM""}",/results,2026-06-08 17:44:15.085009+05:30
+839,34,ats_analysis_completed,"{""ats_score"": 63, ""job_title"": ""Senior PM""}",/results,2026-06-16 11:54:11.357503+05:30
+840,35,ats_analysis_completed,"{""ats_score"": 87, ""job_title"": ""Senior PM""}",/results,2026-06-04 23:21:36.109856+05:30
+841,36,ats_analysis_completed,"{""ats_score"": 68, ""job_title"": ""Senior PM""}",/results,2026-05-08 16:16:18.666252+05:30
+842,37,ats_analysis_completed,"{""ats_score"": 82, ""job_title"": ""Senior PM""}",/results,2026-05-11 13:29:35.884198+05:30
+843,38,ats_analysis_completed,"{""ats_score"": 88, ""job_title"": ""Senior PM""}",/results,2026-06-03 14:03:43.335953+05:30
+844,39,ats_analysis_completed,"{""ats_score"": 68, ""job_title"": ""Senior PM""}",/results,2026-05-29 11:10:10.06811+05:30
+845,40,ats_analysis_completed,"{""ats_score"": 69, ""job_title"": ""Senior PM""}",/results,2026-06-15 21:55:22.645793+05:30
+846,41,ats_analysis_completed,"{""ats_score"": 89, ""job_title"": ""Senior PM""}",/results,2026-05-28 02:54:55.09963+05:30
+847,42,ats_analysis_completed,"{""ats_score"": 84, ""job_title"": ""Senior PM""}",/results,2026-06-10 22:13:22.675741+05:30
+848,43,ats_analysis_completed,"{""ats_score"": 89, ""job_title"": ""Senior PM""}",/results,2026-06-05 11:28:44.810569+05:30
+849,14,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-16 09:10:04.294051+05:30
+850,15,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-13 00:49:08.276257+05:30
+851,16,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-03 19:53:28.512417+05:30
+852,17,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-15 09:13:23.60626+05:30
+853,18,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-31 04:08:41.590863+05:30
+854,19,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-18 13:21:12.362687+05:30
+855,20,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-04 12:21:54.530219+05:30
+856,21,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-11 12:43:22.706439+05:30
+857,22,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-15 06:44:37.247583+05:30
+858,23,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-13 03:58:16.45359+05:30
+859,24,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-08 18:04:57.219811+05:30
+860,25,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-09 04:55:55.119966+05:30
+861,26,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-12 08:40:59.738411+05:30
+862,27,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-22 18:31:39.169964+05:30
+863,28,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-06 03:19:03.33157+05:30
+864,29,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-10 07:31:56.244714+05:30
+865,30,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-19 18:10:27.133524+05:30
+866,31,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-29 01:54:57.02425+05:30
+867,32,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-08 18:43:27.446261+05:30
+868,33,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-08 17:54:15.085009+05:30
+869,34,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-16 12:04:11.357503+05:30
+870,35,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-04 23:31:36.109856+05:30
+871,36,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-08 16:26:18.666252+05:30
+872,37,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-11 13:39:35.884198+05:30
+873,38,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-03 14:13:43.335953+05:30
+874,39,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-29 11:20:10.06811+05:30
+875,40,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-15 22:05:22.645793+05:30
+876,41,interview_questions_generated,"{""question_count"": 5}",/interview,2026-05-28 03:04:55.09963+05:30
+877,42,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-10 22:23:22.675741+05:30
+878,43,interview_questions_generated,"{""question_count"": 5}",/interview,2026-06-05 11:38:44.810569+05:30
+879,14,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-12 03:58:42.304983+05:30
+880,15,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-20 03:32:47.594776+05:30
+881,16,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-20 19:35:55.074991+05:30
+882,17,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-13 10:11:15.925896+05:30
+883,18,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-18 19:24:39.099613+05:30
+884,19,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-13 11:07:16.098875+05:30
+885,20,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-12 07:10:40.180391+05:30
+886,21,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 08:38:49.975006+05:30
+887,22,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-18 03:29:28.428204+05:30
+888,23,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-19 23:44:38.242921+05:30
+889,24,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-11 20:33:29.523504+05:30
+890,25,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 03:30:57.935754+05:30
+891,26,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-19 01:04:19.086222+05:30
+892,27,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-17 00:21:53.130785+05:30
+893,28,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-18 10:14:45.932361+05:30
+894,29,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 05:21:06.942197+05:30
+895,30,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-17 10:19:22.656399+05:30
+896,31,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-17 01:07:58.352279+05:30
+897,32,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-19 07:36:31.119795+05:30
+898,33,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 04:52:48.778644+05:30
+899,34,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-12 23:36:32.938467+05:30
+900,35,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-21 04:15:04.478875+05:30
+901,36,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-13 16:08:29.623185+05:30
+902,37,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-14 10:38:11.089311+05:30
+903,38,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-19 07:06:29.180308+05:30
+904,39,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-15 17:36:03.031457+05:30
+905,40,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-12 22:20:03.490818+05:30
+906,41,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-16 22:35:57.12329+05:30
+907,42,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-20 04:34:28.536817+05:30
+908,43,return_visit,"{""days_since_last_visit"": 7}",/upload,2026-06-20 17:57:03.704946+05:30
+909,44,signup_completed,"{""method"": ""email""}",/signup,2026-04-24 19:00:48.16288+05:30
+910,45,signup_completed,"{""method"": ""email""}",/signup,2026-05-14 09:15:21.837753+05:30
+911,46,signup_completed,"{""method"": ""email""}",/signup,2026-06-03 17:33:04.964556+05:30
+912,47,signup_completed,"{""method"": ""email""}",/signup,2026-05-09 09:53:22.385134+05:30
+913,48,signup_completed,"{""method"": ""email""}",/signup,2026-05-26 03:10:53.785371+05:30
+914,49,signup_completed,"{""method"": ""email""}",/signup,2026-05-29 14:15:14.009654+05:30
+915,50,signup_completed,"{""method"": ""email""}",/signup,2026-05-07 19:27:29.805172+05:30
+916,51,signup_completed,"{""method"": ""email""}",/signup,2026-05-04 16:53:53.208613+05:30
+917,52,signup_completed,"{""method"": ""email""}",/signup,2026-04-30 21:52:40.738989+05:30
+918,53,signup_completed,"{""method"": ""email""}",/signup,2026-05-20 05:34:28.864037+05:30
+919,54,signup_completed,"{""method"": ""email""}",/signup,2026-06-17 11:03:37.638536+05:30
+920,55,signup_completed,"{""method"": ""email""}",/signup,2026-05-19 07:17:40.086136+05:30
+921,56,signup_completed,"{""method"": ""email""}",/signup,2026-04-28 16:43:43.662779+05:30
+922,57,signup_completed,"{""method"": ""email""}",/signup,2026-05-27 18:42:36.679808+05:30
+923,58,signup_completed,"{""method"": ""email""}",/signup,2026-06-07 17:18:45.815955+05:30
+924,59,signup_completed,"{""method"": ""email""}",/signup,2026-06-04 05:20:14.866391+05:30
+925,60,signup_completed,"{""method"": ""email""}",/signup,2026-04-23 16:06:53.233478+05:30
+926,61,signup_completed,"{""method"": ""email""}",/signup,2026-06-20 03:52:23.916077+05:30
+927,62,signup_completed,"{""method"": ""email""}",/signup,2026-06-02 09:00:29.554195+05:30
+928,63,signup_completed,"{""method"": ""email""}",/signup,2026-06-12 15:06:04.204751+05:30
+929,64,signup_completed,"{""method"": ""email""}",/signup,2026-04-28 03:44:14.698357+05:30
+930,65,signup_completed,"{""method"": ""email""}",/signup,2026-04-25 18:20:43.80121+05:30
+931,66,signup_completed,"{""method"": ""email""}",/signup,2026-06-11 11:48:12.722317+05:30
+932,67,signup_completed,"{""method"": ""email""}",/signup,2026-06-15 21:27:09.110531+05:30
+933,68,signup_completed,"{""method"": ""email""}",/signup,2026-05-11 00:01:35.168098+05:30
+934,69,signup_completed,"{""method"": ""email""}",/signup,2026-06-01 14:56:17.739824+05:30
+935,70,signup_completed,"{""method"": ""email""}",/signup,2026-05-29 17:57:49.726127+05:30
+936,71,signup_completed,"{""method"": ""email""}",/signup,2026-06-09 12:02:36.88257+05:30
+937,72,signup_completed,"{""method"": ""email""}",/signup,2026-05-19 23:33:04.762448+05:30
+938,73,signup_completed,"{""method"": ""email""}",/signup,2026-05-19 19:22:08.233507+05:30
+939,44,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-24 21:00:48.16288+05:30
+940,45,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-14 11:15:21.837753+05:30
+941,46,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-03 19:33:04.964556+05:30
+942,47,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-09 11:53:22.385134+05:30
+943,48,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-26 05:10:53.785371+05:30
+944,49,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-29 16:15:14.009654+05:30
+945,50,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-07 21:27:29.805172+05:30
+946,51,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-04 18:53:53.208613+05:30
+947,52,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-30 23:52:40.738989+05:30
+948,53,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-20 07:34:28.864037+05:30
+949,54,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-17 13:03:37.638536+05:30
+950,55,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-19 09:17:40.086136+05:30
+951,56,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-28 18:43:43.662779+05:30
+952,57,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-27 20:42:36.679808+05:30
+953,58,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-07 19:18:45.815955+05:30
+954,59,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-04 07:20:14.866391+05:30
+955,60,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-23 18:06:53.233478+05:30
+956,61,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-20 05:52:23.916077+05:30
+957,62,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-02 11:00:29.554195+05:30
+958,63,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-12 17:06:04.204751+05:30
+959,64,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-28 05:44:14.698357+05:30
+960,65,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-25 20:20:43.80121+05:30
+961,66,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-11 13:48:12.722317+05:30
+962,67,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-15 23:27:09.110531+05:30
+963,68,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-11 02:01:35.168098+05:30
+964,69,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-01 16:56:17.739824+05:30
+965,70,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-29 19:57:49.726127+05:30
+966,71,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-09 14:02:36.88257+05:30
+967,72,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-20 01:33:04.762448+05:30
+968,73,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-19 21:22:08.233507+05:30
+969,44,ats_analysis_completed,"{""ats_score"": 45}",/results,2026-04-24 21:10:48.16288+05:30
+970,45,ats_analysis_completed,"{""ats_score"": 67}",/results,2026-05-14 11:25:21.837753+05:30
+971,46,ats_analysis_completed,"{""ats_score"": 65}",/results,2026-06-03 19:43:04.964556+05:30
+972,47,ats_analysis_completed,"{""ats_score"": 51}",/results,2026-05-09 12:03:22.385134+05:30
+973,48,ats_analysis_completed,"{""ats_score"": 48}",/results,2026-05-26 05:20:53.785371+05:30
+974,49,ats_analysis_completed,"{""ats_score"": 45}",/results,2026-05-29 16:25:14.009654+05:30
+975,50,ats_analysis_completed,"{""ats_score"": 54}",/results,2026-05-07 21:37:29.805172+05:30
+976,51,ats_analysis_completed,"{""ats_score"": 57}",/results,2026-05-04 19:03:53.208613+05:30
+977,52,ats_analysis_completed,"{""ats_score"": 59}",/results,2026-05-01 00:02:40.738989+05:30
+978,53,ats_analysis_completed,"{""ats_score"": 51}",/results,2026-05-20 07:44:28.864037+05:30
+979,54,ats_analysis_completed,"{""ats_score"": 61}",/results,2026-06-17 13:13:37.638536+05:30
+980,55,ats_analysis_completed,"{""ats_score"": 47}",/results,2026-05-19 09:27:40.086136+05:30
+981,56,ats_analysis_completed,"{""ats_score"": 42}",/results,2026-04-28 18:53:43.662779+05:30
+982,57,ats_analysis_completed,"{""ats_score"": 57}",/results,2026-05-27 20:52:36.679808+05:30
+983,58,ats_analysis_completed,"{""ats_score"": 44}",/results,2026-06-07 19:28:45.815955+05:30
+984,59,ats_analysis_completed,"{""ats_score"": 60}",/results,2026-06-04 07:30:14.866391+05:30
+985,60,ats_analysis_completed,"{""ats_score"": 61}",/results,2026-04-23 18:16:53.233478+05:30
+986,61,ats_analysis_completed,"{""ats_score"": 50}",/results,2026-06-20 06:02:23.916077+05:30
+987,62,ats_analysis_completed,"{""ats_score"": 66}",/results,2026-06-02 11:10:29.554195+05:30
+988,63,ats_analysis_completed,"{""ats_score"": 41}",/results,2026-06-12 17:16:04.204751+05:30
+989,64,ats_analysis_completed,"{""ats_score"": 64}",/results,2026-04-28 05:54:14.698357+05:30
+990,65,ats_analysis_completed,"{""ats_score"": 49}",/results,2026-04-25 20:30:43.80121+05:30
+991,66,ats_analysis_completed,"{""ats_score"": 56}",/results,2026-06-11 13:58:12.722317+05:30
+992,67,ats_analysis_completed,"{""ats_score"": 44}",/results,2026-06-15 23:37:09.110531+05:30
+993,68,ats_analysis_completed,"{""ats_score"": 46}",/results,2026-05-11 02:11:35.168098+05:30
+994,69,ats_analysis_completed,"{""ats_score"": 52}",/results,2026-06-01 17:06:17.739824+05:30
+995,70,ats_analysis_completed,"{""ats_score"": 45}",/results,2026-05-29 20:07:49.726127+05:30
+996,71,ats_analysis_completed,"{""ats_score"": 53}",/results,2026-06-09 14:12:36.88257+05:30
+997,72,ats_analysis_completed,"{""ats_score"": 66}",/results,2026-05-20 01:43:04.762448+05:30
+998,73,ats_analysis_completed,"{""ats_score"": 53}",/results,2026-05-19 21:32:08.233507+05:30
+999,44,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-08 19:00:48.16288+05:30
+1000,45,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-28 09:15:21.837753+05:30
+1001,46,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-17 17:33:04.964556+05:30
+1002,47,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-23 09:53:22.385134+05:30
+1003,48,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-09 03:10:53.785371+05:30
+1004,49,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-12 14:15:14.009654+05:30
+1005,50,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-21 19:27:29.805172+05:30
+1006,51,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-18 16:53:53.208613+05:30
+1007,52,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-14 21:52:40.738989+05:30
+1008,53,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-03 05:34:28.864037+05:30
+1009,54,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-07-01 11:03:37.638536+05:30
+1010,55,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-02 07:17:40.086136+05:30
+1011,56,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-05-12 16:43:43.662779+05:30
+1012,57,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-10 18:42:36.679808+05:30
+1013,58,return_visit,"{""days_since_last_visit"": 14}",/upload,2026-06-21 17:18:45.815955+05:30
+1014,74,signup_completed,"{""method"": ""google""}",/signup,2026-06-04 20:31:49.085502+05:30
+1015,75,signup_completed,"{""method"": ""google""}",/signup,2026-04-25 02:46:21.919844+05:30
+1016,76,signup_completed,"{""method"": ""google""}",/signup,2026-06-20 10:44:05.20444+05:30
+1017,77,signup_completed,"{""method"": ""google""}",/signup,2026-06-12 18:09:31.364021+05:30
+1018,78,signup_completed,"{""method"": ""google""}",/signup,2026-05-21 13:19:24.44415+05:30
+1019,79,signup_completed,"{""method"": ""google""}",/signup,2026-04-27 15:14:01.663356+05:30
+1020,80,signup_completed,"{""method"": ""google""}",/signup,2026-06-17 11:45:42.703875+05:30
+1021,81,signup_completed,"{""method"": ""google""}",/signup,2026-05-19 16:12:02.735777+05:30
+1022,82,signup_completed,"{""method"": ""google""}",/signup,2026-05-17 22:25:34.136652+05:30
+1023,83,signup_completed,"{""method"": ""google""}",/signup,2026-04-24 19:53:51.869374+05:30
+1024,84,signup_completed,"{""method"": ""google""}",/signup,2026-06-20 22:48:19.684602+05:30
+1025,85,signup_completed,"{""method"": ""google""}",/signup,2026-05-13 14:44:58.256081+05:30
+1026,86,signup_completed,"{""method"": ""google""}",/signup,2026-06-09 12:24:06.571187+05:30
+1027,87,signup_completed,"{""method"": ""google""}",/signup,2026-06-19 08:17:39.8176+05:30
+1028,88,signup_completed,"{""method"": ""google""}",/signup,2026-06-07 15:35:37.396868+05:30
+1029,89,signup_completed,"{""method"": ""google""}",/signup,2026-05-14 20:33:37.407038+05:30
+1030,90,signup_completed,"{""method"": ""google""}",/signup,2026-05-08 16:08:32.572661+05:30
+1031,91,signup_completed,"{""method"": ""google""}",/signup,2026-06-09 00:37:38.332051+05:30
+1032,92,signup_completed,"{""method"": ""google""}",/signup,2026-06-11 21:25:24.174976+05:30
+1033,93,signup_completed,"{""method"": ""google""}",/signup,2026-05-11 20:45:37.75185+05:30
+1034,94,signup_completed,"{""method"": ""google""}",/signup,2026-05-21 10:23:21.854165+05:30
+1035,95,signup_completed,"{""method"": ""google""}",/signup,2026-05-19 21:31:39.803137+05:30
+1036,96,signup_completed,"{""method"": ""google""}",/signup,2026-05-31 20:19:41.453041+05:30
+1037,97,signup_completed,"{""method"": ""google""}",/signup,2026-05-23 04:22:59.99095+05:30
+1038,98,signup_completed,"{""method"": ""google""}",/signup,2026-05-30 06:00:30.100297+05:30
+1039,99,signup_completed,"{""method"": ""google""}",/signup,2026-06-01 17:04:23.985432+05:30
+1040,100,signup_completed,"{""method"": ""google""}",/signup,2026-04-30 10:20:54.342022+05:30
+1041,101,signup_completed,"{""method"": ""google""}",/signup,2026-06-20 16:58:10.828017+05:30
+1043,103,signup_completed,"{""method"": ""google""}",/signup,2026-05-09 10:06:54.414556+05:30
+1044,74,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-04 21:01:49.085502+05:30
+1045,75,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-25 03:16:21.919844+05:30
+1046,76,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-20 11:14:05.20444+05:30
+1047,77,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-12 18:39:31.364021+05:30
+1048,78,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-21 13:49:24.44415+05:30
+1049,79,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-27 15:44:01.663356+05:30
+1050,80,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-17 12:15:42.703875+05:30
+1051,81,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-19 16:42:02.735777+05:30
+1052,82,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-17 22:55:34.136652+05:30
+1053,83,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-04-24 20:23:51.869374+05:30
+1054,84,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-20 23:18:19.684602+05:30
+1055,85,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-05-13 15:14:58.256081+05:30
+1056,86,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-09 12:54:06.571187+05:30
+1057,87,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-19 08:47:39.8176+05:30
+1058,88,resume_uploaded,"{""file_type"": ""application/pdf""}",/upload,2026-06-07 16:05:37.396868+05:30

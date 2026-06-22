@@ -1,0 +1,104 @@
+user_id,email,full_name,plan,events_total,had_return_visit,is_premium,churn_probability,churn_risk,last_event_at
+100,user100@test.com,Test User 100,free,1,0,0,0.976122,High,2026-04-30 04:50:54.342022+00:00
+103,user103@test.com,Test User 103,free,1,0,0,0.976122,High,2026-05-09 04:36:54.414556+00:00
+90,user90@test.com,Test User 90,free,1,0,0,0.976122,High,2026-05-08 10:38:32.572661+00:00
+99,user99@test.com,Test User 99,free,1,0,0,0.976122,High,2026-06-01 11:34:23.985432+00:00
+60,user60@test.com,Test User 60,free,3,0,0,0.97461873,High,2026-04-23 12:46:53.233478+00:00
+65,user65@test.com,Test User 65,free,3,0,0,0.97461873,High,2026-04-25 15:00:43.801210+00:00
+64,user64@test.com,Test User 64,free,3,0,0,0.97461873,High,2026-04-28 00:24:14.698357+00:00
+72,user72@test.com,Test User 72,free,3,0,0,0.97338265,High,2026-05-19 20:13:04.762448+00:00
+73,user73@test.com,Test User 73,free,3,0,0,0.97338265,High,2026-05-19 16:02:08.233507+00:00
+101,user101@test.com,Test User 101,free,1,0,0,0.9715333,High,2026-06-20 11:28:10.828017+00:00
+95,user95@test.com,Test User 95,free,1,0,0,0.97043025,High,2026-05-19 16:01:39.803137+00:00
+44,user44@test.com,Test User 44,free,4,1,0,0.9584913,High,2026-05-08 13:30:48.162880+00:00
+51,user51@test.com,Test User 51,free,4,1,0,0.9584913,High,2026-05-18 11:23:53.208613+00:00
+52,user52@test.com,Test User 52,free,4,1,0,0.9584913,High,2026-05-14 16:22:40.738989+00:00
+50,user50@test.com,Test User 50,free,4,1,0,0.9584913,High,2026-05-21 13:57:29.805172+00:00
+47,user47@test.com,Test User 47,free,4,1,0,0.9495077,High,2026-05-23 04:23:22.385134+00:00
+88,user88@test.com,Test User 88,free,2,0,0,0.94543505,High,2026-06-07 10:35:37.396868+00:00
+74,user74@test.com,Test User 74,free,2,0,0,0.94543505,High,2026-06-04 15:31:49.085502+00:00
+79,user79@test.com,Test User 79,free,2,0,0,0.94543505,High,2026-04-27 10:14:01.663356+00:00
+83,user83@test.com,Test User 83,free,2,0,0,0.94543505,High,2026-04-24 14:53:51.869374+00:00
+75,user75@test.com,Test User 75,free,2,0,0,0.94543505,High,2026-04-24 21:46:21.919844+00:00
+55,user55@test.com,Test User 55,free,4,1,0,0.94464624,High,2026-06-02 01:47:40.086136+00:00
+53,user53@test.com,Test User 53,free,4,1,0,0.94464624,High,2026-06-03 00:04:28.864037+00:00
+56,user56@test.com,Test User 56,premium,4,1,1,0.90811867,High,2026-05-12 11:13:43.662779+00:00
+93,user93@test.com,Test User 93,free,1,0,0,0.88258994,High,2026-05-11 15:15:37.751850+00:00
+97,user97@test.com,Test User 97,free,1,0,0,0.86773664,High,2026-05-22 22:52:59.990950+00:00
+96,user96@test.com,Test User 96,free,1,0,0,0.844215,High,2026-05-31 14:49:41.453041+00:00
+69,user69@test.com,Test User 69,free,3,0,0,0.81383187,High,2026-06-01 11:36:17.739824+00:00
+68,user68@test.com,Test User 68,free,3,0,0,0.8108399,High,2026-05-10 20:41:35.168098+00:00
+102,user102@test.com,Test User 102,free,1,0,0,0.8100367,High,2026-06-09 18:44:16.650901+00:00
+81,user81@test.com,Test User 81,free,2,0,0,0.8001161,High,2026-05-19 11:12:02.735777+00:00
+78,user78@test.com,Test User 78,free,2,0,0,0.8001161,High,2026-05-21 08:19:24.444150+00:00
+1,neha@test.com,Neha Sharma,premium,27,1,1,0.79215175,High,2026-05-31 04:14:43.807495+00:00
+98,user98@test.com,Test User 98,premium,1,0,1,0.7702476,High,2026-05-30 00:30:30.100297+00:00
+45,user45@test.com,Test User 45,free,4,1,0,0.74813044,High,2026-05-28 03:45:21.837753+00:00
+3,sara@test.com,Sara Khan,free,1,0,0,0.73574257,High,2026-05-31 04:11:43.807495+00:00
+70,user70@test.com,Test User 70,premium,3,0,1,0.73005134,High,2026-05-29 14:37:49.726127+00:00
+62,user62@test.com,Test User 62,free,3,0,0,0.7062558,High,2026-06-02 05:40:29.554195+00:00
+59,user59@test.com,Test User 59,free,3,0,0,0.6873676,High,2026-06-04 02:00:14.866391+00:00
+94,user94@test.com,Test User 94,free,1,0,0,0.6867693,High,2026-05-21 04:53:21.854165+00:00
+82,user82@test.com,Test User 82,free,2,0,0,0.65987515,Medium,2026-05-17 17:25:34.136652+00:00
+80,user80@test.com,Test User 80,free,2,0,0,0.65987515,Medium,2026-06-17 06:45:42.703875+00:00
+89,user89@test.com,Test User 89,free,1,0,0,0.61709064,Medium,2026-05-14 15:03:37.407038+00:00
+85,user85@test.com,Test User 85,free,2,0,0,0.5625885,Medium,2026-05-13 09:44:58.256081+00:00
+86,user86@test.com,Test User 86,free,2,0,0,0.45224103,Medium,2026-06-09 07:24:06.571187+00:00
+92,user92@test.com,Test User 92,free,1,0,0,0.34974283,Medium,2026-06-11 15:55:24.174976+00:00
+71,user71@test.com,Test User 71,free,3,0,0,0.32474518,Low,2026-06-09 08:42:36.882570+00:00
+91,user91@test.com,Test User 91,premium,1,0,1,0.26610336,Low,2026-06-08 19:07:38.332051+00:00
+84,user84@test.com,Test User 84,premium,2,0,1,0.23970547,Low,2026-06-20 17:48:19.684602+00:00
+77,user77@test.com,Test User 77,premium,2,0,1,0.21642601,Low,2026-06-12 13:09:31.364021+00:00
+76,user76@test.com,Test User 76,free,2,0,0,0.21099973,Low,2026-06-20 05:44:05.204440+00:00
+87,user87@test.com,Test User 87,free,2,0,0,0.20455562,Low,2026-06-19 03:17:39.817600+00:00
+48,user48@test.com,Test User 48,free,4,1,0,0.14530544,Low,2026-06-08 21:40:53.785371+00:00
+57,user57@test.com,Test User 57,free,4,1,0,0.105244234,Low,2026-06-10 13:12:36.679808+00:00
+41,user41@test.com,Test User 41,free,36,1,0,0.09496013,Low,2026-06-16 17:05:57.123290+00:00
+6,john@test.com,John D'souza,free,1,0,0,0.07860613,Low,2026-06-12 04:11:43.807495+00:00
+13,amarnathskanaki@gmail.com,amar,free,1,0,0,0.07860613,Low,2026-06-21 10:45:17.973188+00:00
+9,aisha@test.com,Aisha Malik,free,1,0,0,0.07860613,Low,2026-06-18 04:11:43.807495+00:00
+49,user49@test.com,Test User 49,premium,4,1,1,0.06783139,Low,2026-06-12 08:45:14.009654+00:00
+11,testuser@example.com,Test User,free,3,0,0,0.06368324,Low,2026-06-21 05:06:21.028301+00:00
+7,meena@test.com,Meena Iyer,free,3,0,0,0.06368324,Low,2026-06-15 04:15:43.807495+00:00
+61,user61@test.com,Test User 61,free,3,0,0,0.06368324,Low,2026-06-20 00:32:23.916077+00:00
+67,user67@test.com,Test User 67,free,3,0,0,0.06368324,Low,2026-06-15 18:07:09.110531+00:00
+66,user66@test.com,Test User 66,free,3,0,0,0.06368324,Low,2026-06-11 08:28:12.722317+00:00
+46,user46@test.com,Test User 46,free,4,1,0,0.061788313,Low,2026-06-17 12:03:04.964556+00:00
+63,user63@test.com,Test User 63,premium,3,0,1,0.06043734,Low,2026-06-12 11:46:04.204751+00:00
+21,user21@test.com,Test User 21,premium,36,1,1,0.05496717,Low,2026-06-15 03:08:49.975006+00:00
+27,user27@test.com,Test User 27,free,36,1,0,0.05188066,Low,2026-06-16 18:51:53.130785+00:00
+37,user37@test.com,Test User 37,free,36,1,0,0.050922506,Low,2026-06-14 05:08:11.089311+00:00
+32,user32@test.com,Test User 32,free,36,1,0,0.050922506,Low,2026-06-19 02:06:31.119795+00:00
+28,user28@test.com,Test User 28,premium,36,1,1,0.050922506,Low,2026-06-18 04:44:45.932361+00:00
+17,user17@test.com,Test User 17,free,36,1,0,0.050922506,Low,2026-06-13 04:41:15.925896+00:00
+25,user25@test.com,Test User 25,free,36,1,0,0.050922506,Low,2026-06-14 22:00:57.935754+00:00
+16,user16@test.com,Test User 16,free,36,1,0,0.050922506,Low,2026-06-20 14:05:55.074991+00:00
+26,user26@test.com,Test User 26,free,36,1,0,0.050922506,Low,2026-06-18 19:34:19.086222+00:00
+36,user36@test.com,Test User 36,free,36,1,0,0.050922506,Low,2026-06-13 10:38:29.623185+00:00
+2,amit@test.com,Amit Patel,free,8,1,0,0.047526497,Low,2026-06-08 04:11:43.807495+00:00
+14,user14@test.com,Test User 14,premium,36,1,1,0.04186571,Low,2026-06-11 22:28:42.304983+00:00
+30,user30@test.com,Test User 30,free,36,1,0,0.03840387,Low,2026-06-17 04:49:22.656399+00:00
+19,user19@test.com,Test User 19,free,36,1,0,0.02479988,Low,2026-06-13 05:37:16.098875+00:00
+10,dev@test.com,Dev Bose,free,2,0,0,0.01662589,Low,2026-06-19 04:14:43.807495+00:00
+5,priya@test.com,Priya Nair,free,2,0,0,0.01662589,Low,2026-06-10 04:16:43.807495+00:00
+39,user39@test.com,Test User 39,free,36,1,0,0.01496088,Low,2026-06-15 12:06:03.031457+00:00
+58,user58@test.com,Test User 58,free,4,1,0,0.014200835,Low,2026-06-21 11:48:45.815955+00:00
+54,user54@test.com,Test User 54,free,4,1,0,0.014200835,Low,2026-07-01 05:33:37.638536+00:00
+18,user18@test.com,Test User 18,free,36,1,0,0.013816971,Low,2026-06-18 13:54:39.099613+00:00
+31,user31@test.com,Test User 31,free,36,1,0,0.013816971,Low,2026-06-16 19:37:58.352279+00:00
+35,user35@test.com,Test User 35,premium,36,1,1,0.013816971,Low,2026-06-20 22:45:04.478875+00:00
+43,user43@test.com,Test User 43,free,36,1,0,0.013816971,Low,2026-06-20 12:27:03.704946+00:00
+20,user20@test.com,Test User 20,free,36,1,0,0.013816971,Low,2026-06-12 01:40:40.180391+00:00
+38,user38@test.com,Test User 38,free,36,1,0,0.013816971,Low,2026-06-19 01:36:29.180308+00:00
+8,carlos@test.com,Carlos Lima,premium,5,0,1,0.012925109,Low,2026-06-17 04:18:43.807495+00:00
+4,ravi@test.com,Ravi Menon,premium,16,1,1,0.012925109,Low,2026-06-15 04:12:43.807495+00:00
+12,diksha@gmail.com,Diksha,free,8,0,0,0.011934973,Low,2026-06-21 10:44:12.102050+00:00
+29,user29@test.com,Test User 29,free,36,1,0,0.008505418,Low,2026-06-14 23:51:06.942197+00:00
+24,user24@test.com,Test User 24,free,36,1,0,0.008505418,Low,2026-06-11 15:03:29.523504+00:00
+33,user33@test.com,Test User 33,free,36,1,0,0.008505418,Low,2026-06-14 23:22:48.778644+00:00
+42,user42@test.com,Test User 42,premium,36,1,1,0.008505418,Low,2026-06-19 23:04:28.536817+00:00
+23,user23@test.com,Test User 23,free,36,1,0,0.008204647,Low,2026-06-19 18:14:38.242921+00:00
+34,user34@test.com,Test User 34,free,36,1,0,0.008204647,Low,2026-06-16 06:34:11.357503+00:00
+15,user15@test.com,Test User 15,free,36,1,0,0.008204647,Low,2026-06-19 22:02:47.594776+00:00
+22,user22@test.com,Test User 22,free,36,1,0,0.008204647,Low,2026-06-17 21:59:28.428204+00:00
+40,user40@test.com,Test User 40,free,36,1,0,0.008204647,Low,2026-06-15 16:35:22.645793+00:00
