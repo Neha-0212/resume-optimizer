@@ -96,7 +96,7 @@ elif page == "Upload & Analyze":
                 if email and password:
                     try:
                         res = requests.post(
-                            "http://127.0.0.1:8000/auth/login",
+                            "https://resume-optimizer-u12f.onrender.com/auth/login",
                             json={"email": email, "password": password}
                         )
                         if res.status_code == 200:
@@ -120,7 +120,7 @@ elif page == "Upload & Analyze":
                 if new_name and new_email and new_pass:
                     try:
                         res = requests.post(
-                            "http://127.0.0.1:8000/auth/signup",
+                            "https://resume-optimizer-u12f.onrender.com/auth/signup",
                             json={
                                 "email": new_email,
                                 "full_name": new_name,
@@ -178,7 +178,7 @@ elif page == "Upload & Analyze":
                             "job_description": job_description
                         }
                         res = requests.post(
-                            "http://127.0.0.1:8000/resume/analyze",
+                            "https://resume-optimizer-u12f.onrender.com/resume/analyze",
                             files=files,
                             data=data
                         )
@@ -310,7 +310,7 @@ elif page == "Feedback":
                     payload["user_id"] = st.session_state.user_id
 
                 res = requests.post(
-                    "http://127.0.0.1:8000/feedback/submit",
+                    "https://resume-optimizer-u12f.onrender.com/feedback/submit",
                     json=payload
                 )
                 if res.status_code == 200:
@@ -330,7 +330,7 @@ elif page == "Feedback":
             if st.button("Upgrade →", type="primary"):
                 try:
                     requests.post(
-                        "http://127.0.0.1:8000/feedback/submit",
+                        "https://resume-optimizer-u12f.onrender.com/feedback/submit",
                         json={
                             "user_id": st.session_state.user_id,
                             "feedback_text": "User clicked premium upgrade button",
