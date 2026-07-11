@@ -1,0 +1,123 @@
+Analytics Queries in psql
+
+Query 1 — Sentiment breakdown:
+SELECT
+    sentiment,
+    COUNT(*)                                    AS count,
+    ROUND(COUNT(*)::numeric /
+        SUM(COUNT(*)) OVER() * 100, 1)         AS percentage,
+    ROUND(AVG(rating), 2)                       AS avg_rating
+FROM feedback
+WHERE sentiment IS NOT NULL
+GROUP BY sentiment
+ORDER BY count DESC;
+
+Output:
+ sentiment | count | percentage | avg_rating
+-----------+-------+------------+------------
+ positive  |    29 |       60.4 |       3.14
+ neutral   |    13 |       27.1 |       2.62
+ negative  |     6 |       12.5 |       2.67
+(3 rows)
+
+Query 2 — Category breakdown:
+SELECT
+    category,
+    COUNT(*)                                        AS total,
+    ROUND(AVG(sentiment_score)::numeric, 3)        AS avg_sentiment,
+    ROUND(AVG(rating)::numeric, 2)                 AS avg_rating,
+    SUM(CASE WHEN sentiment = 'negative'
+        THEN 1 ELSE 0 END)                          AS negative_count
+FROM feedback
+WHERE category IS NOT NULL
+GROUP BY category
+ORDER BY negative_count DESC;
+
+Output:
+  category   | total | avg_sentiment | avg_rating | negative_count
+-------------+-------+---------------+------------+----------------
+ performance |     7 |         0.067 |       3.00 |              5
+ onboarding  |     1 |        -0.150 |       1.00 |              1
+ general     |     3 |         0.217 |       4.00 |              0
+ accuracy    |    12 |         0.282 |       3.00 |              0
+ features    |    18 |         0.530 |       2.94 |              0
+ value       |     7 |         0.284 |       2.57 |              0
+(6 rows)
+
+Query 3 — Most negative feedback (priority complaints):
+SELECT
+    category,
+    COUNT(*)                                        AS total,
+    ROUND(AVG(sentiment_score)::numeric, 3)        AS avg_sentiment,
+    ROUND(AVG(rating)::numeric, 2)                 AS avg_rating,
+    SUM(CASE WHEN sentiment = 'negative'
+        THEN 1 ELSE 0 END)                          AS negative_count
+FROM feedback
+WHERE category IS NOT NULL
+GROUP BY category
+ORDER BY negative_count DESC;
+
+Output:
+  category   | total | avg_sentiment | avg_rating | negative_count
+-------------+-------+---------------+------------+----------------
+ performance |     7 |         0.067 |       3.00 |              5
+ onboarding  |     1 |        -0.150 |       1.00 |              1
+ general     |     3 |         0.217 |       4.00 |              0
+ accuracy    |    12 |         0.282 |       3.00 |              0
+ features    |    18 |         0.530 |       2.94 |              0
+ value       |     7 |         0.284 |       2.57 |              0
+(6 rows)
+
+
+
+Query 4 — Sentiment trend over time:
+
+SELECT
+    DATE_TRUNC('week', created_at)::date            AS week,
+    COUNT(*)                                        AS total_feedback,
+    ROUND(AVG(sentiment_score)::numeric, 3)        AS avg_sentiment,
+    SUM(CASE WHEN sentiment = 'positive'
+        THEN 1 ELSE 0 END)                          AS positive_count,
+    SUM(CASE WHEN sentiment = 'negative'
+        THEN 1 ELSE 0 END)                          AS negative_count
+FROM feedback
+WHERE sentiment IS NOT NULL
+GROUP BY DATE_TRUNC('week', created_at)
+ORDER BY week DESC;
+
+Output:
+    week    | total_feedback | avg_sentiment | positive_count | negative_count
+------------+----------------+---------------+----------------+----------------
+ 2026-07-06 |             11 |         0.328 |              7 |              1
+ 2026-06-29 |              8 |         0.350 |              6 |              0
+ 2026-06-22 |              5 |         0.254 |              2 |              1
+ 2026-06-15 |              9 |         0.321 |              4 |              1
+ 2026-06-08 |              9 |         0.448 |              7 |              1
+ 2026-06-01 |              2 |         0.225 |              1 |              1
+ 2026-05-25 |              2 |         0.225 |              1 |              1
+ 2026-05-18 |              1 |         0.378 |              1 |              0
+ 2026-05-11 |              1 |         0.000 |              0 |              0
+(9 rows)
+
+
+SELECT
+    category,
+    COUNT(*)                                        AS total,
+    ROUND(AVG(sentiment_score)::numeric, 3)        AS avg_sentiment,
+    ROUND(AVG(rating)::numeric, 2)                 AS avg_rating,
+    SUM(CASE WHEN sentiment = 'negative'
+        THEN 1 ELSE 0 END)                          AS negative_count
+FROM feedback
+WHERE category IS NOT NULL
+GROUP BY category
+ORDER BY negative_count DESC;
+
+  category   | total | avg_sentiment | avg_rating | negative_count
+-------------+-------+---------------+------------+----------------
+ performance |     7 |         0.067 |       3.00 |              5
+ onboarding  |     1 |        -0.150 |       1.00 |              1
+ general     |     3 |         0.217 |       4.00 |              0
+ accuracy    |    12 |         0.282 |       3.00 |              0
+ features    |    18 |         0.530 |       2.94 |              0
+ value       |     7 |         0.284 |       2.57 |              0
+(6 rows)

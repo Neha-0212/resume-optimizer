@@ -1,0 +1,1 @@
+echo This is a test resume for Neha Sharma. Skills include Python, SQL, Product Management, Data Analysis. > test_resume.txt

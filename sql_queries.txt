@@ -1,0 +1,291 @@
+Create the Tables
+Run from project root:
+cmdpython -m backend.create_tables
+output:
+Creating tables...
+All tables created successfully.
+
+Load the Seed Data
+Connect to psql:
+cmdpsql -U postgres -d resume_optimizer
+
+Microsoft Windows [Version 10.0.26200.8655]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\NEHA>cd OneDrive\Desktop\resume-optimizer
+
+C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>venv\Scripts\activate
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>python -m backend.database
+C:\Users\NEHA\OneDrive\Desktop\resume-optimizer\backend\database.py:17: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base = declarative_base()
+==================================================
+PostgreSQL Connection: SUCCESS
+Version: PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35227, 64-bit
+==================================================
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>python -m backend.create_tables
+Creating tables...
+All tables created successfully.
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer
+Password for user postgres:
+
+psql (18.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+resume_optimizer=# \i database/seed_data.sql
+INSERT 0 10
+INSERT 0 14
+INSERT 0 36
+INSERT 0 7
+INSERT 0 10
+
+ Validate the Data
+Still inside psql (or reconnect), run these validation queries one by one:
+
+resume_optimizer=# SELECT id, email, full_name, plan, created_at FROM users ORDER BY id;
+ id |      email      |  full_name   |  plan   |            created_at
+----+-----------------+--------------+---------+----------------------------------
+  1 | neha@test.com   | Neha Sharma  | premium | 2026-06-09 20:02:13.201492+05:30
+  2 | amit@test.com   | Amit Patel   | free    | 2026-06-14 20:02:13.201492+05:30
+  3 | sara@test.com   | Sara Khan    | free    | 2026-06-19 20:02:13.201492+05:30
+  4 | ravi@test.com   | Ravi Menon   | premium | 2026-06-24 20:02:13.201492+05:30
+  5 | priya@test.com  | Priya Nair   | free    | 2026-06-29 20:02:13.201492+05:30
+  6 | john@test.com   | John D'souza | free    | 2026-07-01 20:02:13.201492+05:30
+  7 | meena@test.com  | Meena Iyer   | free    | 2026-07-04 20:02:13.201492+05:30
+  8 | carlos@test.com | Carlos Lima  | premium | 2026-07-06 20:02:13.201492+05:30
+  9 | aisha@test.com  | Aisha Malik  | free    | 2026-07-07 20:02:13.201492+05:30
+ 10 | dev@test.com    | Dev Bose     | free    | 2026-07-08 20:02:13.201492+05:30
+(10 rows)
+
+Check events and funnel shape:
+resume_optimizer=# SELECT event_name, COUNT(*) as total
+resume_optimizer-# FROM events
+resume_optimizer-# GROUP BY event_name
+resume_optimizer-# ORDER BY total DESC;
+          event_name           | total
+-------------------------------+-------
+ signup_completed              |    10
+ resume_uploaded               |     9
+ ats_analysis_completed        |     6
+ skill_gap_viewed              |     3
+ premium_clicked               |     3
+ return_visit                  |     3
+ interview_questions_generated |     2
+(7 rows)
+
+Check feedback:
+resume_optimizer=# SELECT user_id, rating, LEFT(feedback_text, 60) as preview FROM feedback;
+ user_id | rating |                           preview
+---------+--------+--------------------------------------------------------------
+       1 |      5 | The ATS score really helped me understand what recruiters se
+       2 |      2 | Score seems too low for my resume. Not sure the matching is
+       3 |      1 | Signed up but could not figure out what to do next. The UI i
+       4 |      5 | Excellent tool. The skill gap section is very useful for tar
+       5 |      3 | Works fine but the analysis takes too long to load.
+       7 |      4 | Good concept. Interview questions feature needs more variety
+       8 |      5 | Really liked the breakdown by job description. Premium seems
+(7 rows)
+
+Check subscriptions:
+resume_optimizer=# SELECT u.email, s.plan, s.status, s.amount_paid
+resume_optimizer-# FROM subscriptions s
+resume_optimizer-# JOIN users u ON s.user_id = u.id;
+      email      |  plan   | status | amount_paid
+-----------------+---------+--------+-------------
+ neha@test.com   | premium | active |         999
+ amit@test.com   | free    | active |           0
+ sara@test.com   | free    | active |           0
+ ravi@test.com   | premium | active |         999
+ priya@test.com  | free    | active |           0
+ john@test.com   | free    | active |           0
+ meena@test.com  | free    | active |           0
+ carlos@test.com | premium | active |         999
+ aisha@test.com  | free    | active |           0
+ dev@test.com    | free    | active |           0
+(10 rows)
+
+ Verify Events Were Logged
+resume_optimizer=# SELECT user_id, event_name, created_at
+resume_optimizer-# FROM events
+resume_optimizer-# WHERE user_id = 11
+resume_optimizer-# ORDER BY created_at;
+ user_id |     event_name     |            created_at
+---------+--------------------+----------------------------------
+      11 | feedback_submitted | 2026-07-10 15:44:08.95822+05:30
+      11 | feedback_submitted | 2026-07-10 15:44:10.874728+05:30
+(2 rows)
+
+event verification
+resume_optimizer=# SELECT user_id, event_name, event_properties, created_at
+resume_optimizer-# FROM events
+resume_optimizer-# WHERE event_name = 'ats_analysis_completed'
+resume_optimizer-# ORDER BY created_at DESC
+resume_optimizer-# LIMIT 3;
+ user_id |       event_name       |                                   event_properties                                    |            created_at
+---------+------------------------+---------------------------------------------------------------------------------------+----------------------------------
+      11 | ats_analysis_completed | {"ats_score": 70.3, "job_title": "Senior Product Manager", "missing_skills_count": 2} | 2026-07-10 16:16:58.567122+05:30
+      11 | ats_analysis_completed | {"ats_score": 70.3, "job_title": "Senior Product Manager", "missing_skills_count": 2} | 2026-07-10 16:16:33.057374+05:30
+      11 | ats_analysis_completed | {"ats_score": 70.3, "job_title": "Senior Product Manager", "missing_skills_count": 2} | 2026-07-10 16:07:18.679646+05:30
+(3 rows)
+
+
+resume_optimizer=#
+
+Retention Analaysis
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer -f analytics/queries/retention_analysis.sql
+Password for user postgres:
+
+ signup_date | cohort_size | day1_retained | day7_retained | day30_retained | day1_pct | day7_pct
+-------------+-------------+---------------+---------------+----------------+----------+----------
+ 2026-07-10  |           1 |             1 |             1 |              0 |    100.0 |    100.0
+ 2026-07-09  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-08  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-07  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-06  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-05  |           3 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-04  |           3 |             2 |             2 |              0 |     66.7 |     66.7
+ 2026-07-03  |           1 |             1 |             1 |              0 |    100.0 |    100.0
+ 2026-07-02  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-07-01  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-30  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-29  |           6 |             4 |             4 |              0 |     66.7 |     66.7
+ 2026-06-28  |           1 |             1 |             1 |              0 |    100.0 |    100.0
+ 2026-06-27  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-26  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-25  |           1 |             1 |             1 |              0 |    100.0 |    100.0
+ 2026-06-24  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-23  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-22  |           2 |             1 |             1 |              0 |     50.0 |     50.0
+ 2026-06-21  |           2 |             1 |             0 |              0 |     50.0 |      0.0
+ 2026-06-20  |           2 |             1 |             1 |              0 |     50.0 |     50.0
+ 2026-06-19  |           3 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-18  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-17  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-16  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-15  |           2 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-14  |           3 |             1 |             1 |              0 |     33.3 |     33.3
+ 2026-06-12  |           3 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-11  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+ 2026-06-10  |           1 |             0 |             0 |              0 |      0.0 |      0.0
+(30 rows)
+
+
+Cohort Analaysis
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer -f analytics/queries/cohort_analysis.sql
+Password for user postgres:
+
+psql: error: connection to server at "localhost" (::1), port 5432 failed: fe_sendauth: no password supplied
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer -f analytics/queries/cohort_analysis.sql
+Password for user postgres:
+
+   cohort   | total_users | upload_rate_pct | ats_rate_pct | skill_gap_rate_pct | premium_click_rate_pct
+------------+-------------+-----------------+--------------+--------------------+------------------------
+ 2026-07-06 |           7 |            71.4 |         57.1 |               28.6 |                   14.3
+ 2026-06-29 |          18 |            83.3 |         55.6 |               38.9 |                    0.0
+ 2026-06-22 |           9 |            88.9 |         88.9 |               44.4 |                   11.1
+ 2026-06-15 |          12 |            50.0 |         33.3 |                8.3 |                    0.0
+ 2026-06-08 |          15 |            86.7 |         73.3 |               33.3 |                    6.7
+ 2026-06-01 |           8 |            87.5 |         75.0 |               12.5 |                    0.0
+ 2026-05-25 |          10 |           100.0 |         90.0 |               60.0 |                    0.0
+ 2026-05-18 |           8 |            75.0 |         62.5 |               37.5 |                    0.0
+ 2026-05-11 |          13 |            92.3 |         61.5 |               30.8 |                    0.0
+(9 rows)
+
+
+Funnel Analaysis
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer -f analytics/queries/funnel_analysis.sql
+Password for user postgres:
+
+      funnel_step      | users | conversion_pct
+-----------------------+-------+----------------
+ Step 1: Signup        |   100 |          100.0
+ Step 2: Upload        |    83 |           83.0
+ Step 3: ATS Analysis  |    68 |           68.0
+ Step 4: Skill Gap     |    33 |           33.0
+ Step 5: Interview Qs  |    32 |           32.0
+ Step 6: Premium Click |     3 |            3.0
+(6 rows)
+
+
+Feature Analaysis
+
+(venv) C:\Users\NEHA\OneDrive\Desktop\resume-optimizer>psql -U postgres -d resume_optimizer -f analytics/queries/feature_adoption.sql
+Password for user postgres:
+
+            feature            | unique_users | total_uses | avg_uses_per_user | adoption_rate_pct
+-------------------------------+--------------+------------+-------------------+-------------------
+ resume_uploaded               |           83 |        115 |              1.39 |              83.0
+ ats_analysis_completed        |           68 |        102 |              1.50 |              68.0
+ skill_gap_viewed              |           33 |         33 |              1.00 |              33.0
+ interview_questions_generated |           32 |         32 |              1.00 |              32.0
+ feedback_submitted            |            3 |          4 |              1.33 |               3.0
+ premium_clicked               |            3 |          3 |              1.00 |               3.0
+(6 rows)
+
+-- Executive metrics summary
+SELECT
+    (SELECT COUNT(*) FROM users)                                          AS total_users,
+    (SELECT COUNT(*) FROM users WHERE plan = 'premium')                  AS premium_users,
+    (SELECT ROUND(COUNT(*)::numeric / (SELECT COUNT(*) FROM users) * 100,1)
+     FROM users WHERE plan = 'premium')                                  AS premium_rate_pct,
+    (SELECT COUNT(DISTINCT user_id) FROM events
+     WHERE event_name = 'resume_uploaded')                               AS users_uploaded,
+    (SELECT ROUND(AVG(rating),2) FROM feedback WHERE rating IS NOT NULL) AS avg_rating,
+    (SELECT COUNT(*) FROM feedback)                                       AS total_feedback;
+
+
+ total_users | premium_users | premium_rate_pct | users_uploaded | avg_rating | total_feedback
+-------------+---------------+------------------+----------------+------------+----------------
+         103 |            16 |             15.5 |             83 |       3.41 |             34
+(1 row)
+
+
+Category Breakdown Query 
+SELECT
+    CASE
+        WHEN u.id BETWEEN 14 AND 43 THEN 'High Engagement'
+        WHEN u.id BETWEEN 44 AND 73 THEN 'Medium Engagement'
+        WHEN u.id BETWEEN 74 AND 103 THEN 'Low Engagement'
+    END AS segment,
+    COUNT(DISTINCT e.user_id) AS users_with_events,
+    COUNT(e.id) AS total_events,
+    ROUND(AVG(event_counts.cnt), 1) AS avg_events_per_user
+FROM users u
+LEFT JOIN events e ON u.id = e.user_id
+LEFT JOIN (
+    SELECT user_id, COUNT(*) AS cnt
+    FROM events GROUP BY user_id
+) event_counts ON u.id = event_counts.user_id
+WHERE u.id BETWEEN 14 AND 103
+GROUP BY 1
+ORDER BY 1;
+
+output:
+      segment      | users_with_events | total_events | avg_events_per_user
+-------------------+-------------------+--------------+---------------------
+ High Engagement   |                30 |          270 |                 9.0
+ Low Engagement    |                30 |           45 |                 1.7
+ Medium Engagement |                30 |          105 |                 3.6
+(3 rows)
+
+
+SELECT event_name, created_at 
+FROM events 
+WHERE user_id = 60 
+ORDER BY created_at;
+output:
+
+       event_name       |            created_at
+------------------------+----------------------------------
+ signup_completed       | 2026-06-02 00:12:56.014925+05:30
+ resume_uploaded        | 2026-06-02 02:12:56.014925+05:30
+ ats_analysis_completed | 2026-06-02 02:22:56.014925+05:30
+(3 rows)
