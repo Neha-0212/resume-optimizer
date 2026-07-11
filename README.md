@@ -255,6 +255,160 @@ psql -U postgres -d resume_optimizer -c "\COPY (SELECT * FROM users) TO 'exports
 ```
 
 ---
+## Power BI Dashboard
+
+The dashboard connects to exported CSV files from PostgreSQL and contains 6 pages covering the full product analytics story.
+
+### Dashboard Pages
+
+---
+
+#### Page 1 — Executive Overview
+
+![Executive Overview](screenshots/executive_overview/executive_overview.jpg)
+
+> A single-screen summary of the product's health. Built for stakeholders who need the full picture in under 30 seconds without drilling into individual reports.
+
+**What it shows:**
+- Total users, premium conversion rate, average rating, and churn rate as KPI cards
+- User distribution by plan (free vs premium) as a pie chart
+- Monthly user growth trend as a line chart
+- High churn user count by risk level as a bar chart
+
+**Why it matters:** This is the first page any product leader or investor would open. If churn rate is high and premium rate is low, the business has a monetization problem. If avg rating is below 3.0, the product has a satisfaction problem. This page surfaces both at a glance.
+
+---
+
+#### Page 2 — Acquisition
+
+![Acquisition](screenshots/acquisition/acquisition.jpg)
+
+> Tracks where users are coming from and how they arrive. Answers the question: which channels are actually working?
+
+**What it shows:**
+- Daily signup volume as a column chart
+- Traffic source breakdown (Google, LinkedIn, Direct) as a pie chart
+- Device split (desktop vs mobile) as a donut chart
+- Plan distribution at signup as a bar chart
+
+**Why it matters:** If 80% of users come from Google but LinkedIn users convert to premium at 3x the rate, you should invest in LinkedIn — not Google. Acquisition data without conversion context is misleading. This page connects source to behavior.
+
+---
+
+#### Page 3 — Funnel
+
+![Funnel](screenshots/funnel/funnel.jpg)
+
+> Maps the user journey from signup to premium click. Identifies exactly where users drop off and how many make it through each stage.
+
+**What it shows:**
+- 6-step funnel: Signup → Upload → ATS Analysis → Skill Gap → Interview Questions → Premium Click
+- Signup-to-upload conversion rate as a KPI card
+- Upload-to-ATS conversion rate as a KPI card
+- Event volume over time as a line chart
+
+**Key finding:** 93% of users upload a resume after signing up — strong activation. But only 32% view the skill gap after completing ATS analysis — the biggest drop-off in the product. This is the page that makes the case for redesigning the post-ATS experience.
+
+**Why it matters:** Without a funnel, you're guessing where to improve. With it, you know exactly which step to fix first.
+
+---
+
+#### Page 4 — Retention
+
+![Retention](screenshots/retention/retention.jpg)
+
+> Measures how often users come back after their first visit. Retention is the single most important signal of product-market fit.
+
+**What it shows:**
+- Return visit rate as a large KPI card
+- Session count by device over time as a stacked bar chart
+- Average session duration by traffic source as a bar chart
+- Feature usage matrix by plan (free vs premium) as a table
+
+**Why it matters:** A product with high acquisition but low retention has a leaky bucket problem — you're spending to acquire users you can't keep. This page shows whether the product creates habits or just one-time visits. LinkedIn users in this dataset show longer session durations, suggesting higher intent users arrive from professional channels.
+
+---
+
+#### Page 5 — Feedback
+
+![Feedback](screenshots/feedback/feedback.jpg)
+
+> Turns unstructured user text into structured product intelligence. Shows what users love, what frustrates them, and how sentiment changes over time.
+
+**What it shows:**
+- Sentiment breakdown (positive / neutral / negative) as a pie chart
+- Average rating by feedback category as a bar chart
+- Weekly sentiment score trend as a line chart
+- Full feedback table sorted by lowest rating first
+
+**Key finding:** Performance is the most critical problem — lowest avg rating at 2.29 and the highest concentration of negative sentiment. Features category has the most feedback volume but positive sentiment, meaning users want more features but aren't angry about the current ones.
+
+**Why it matters:** Most products collect feedback but never analyze it systematically. This page shows how NLP can convert raw text into a prioritized list of product problems.
+
+---
+
+#### Page 6 — Churn
+
+![Churn](screenshots/churn/churn.jpg)
+
+> Shows which users are at risk of leaving and how confident the model is about each prediction. Built to support proactive retention interventions.
+
+**What it shows:**
+- Churn risk distribution (Low / Medium / High) as a bar chart
+- Churn risk breakdown by plan as a stacked bar chart
+- Top high-risk users table sorted by churn probability
+- Churn probability distribution as a histogram
+
+**Key finding:** 38.83% of users are classified as high churn risk. Free plan users dominate this segment. Users with only one session and no return visit within 14 days show 97%+ churn probability. The histogram shows a U-shaped distribution — most users are either clearly retained or clearly churned, with few in the middle.
+
+**Why it matters:** Without a churn model, retention efforts are reactive — you only know a user churned after they leave. This page enables proactive intervention: identify high-risk users before they leave and trigger targeted re-engagement.
+
+---
+
+### DAX Measures
+
+Key measures built in the data model:
+
+```dax
+Total Users = COUNTROWS('users')
+Premium Rate % = DIVIDE([Premium Users], [Total Users]) * 100
+Churn Rate % = DIVIDE([High Churn Users], [Total Users]) * 100
+Signup to Upload % = DIVIDE(
+    CALCULATE(DISTINCTCOUNT(events[user_id]), events[event_name] = "resume_uploaded"),
+    CALCULATE(DISTINCTCOUNT(events[user_id]), events[event_name] = "signup_completed")
+) * 100
+Return Visit Rate % = DIVIDE(
+    CALCULATE(COUNTROWS(events), events[event_name] = "return_visit"),
+    CALCULATE(COUNTROWS(events), events[event_name] = "signup_completed")
+) * 100
+```
+
+### Data Model
+
+- `users` is the center table
+- `events`, `feedback`, `sessions`, `subscriptions` connect via `user_id` (Many-to-One)
+- `churn_scores` connects via `user_id` (One-to-One)
+- All relationships support cross-filtering across pages
+
+### How to Refresh Data
+
+**1. Export fresh data from PostgreSQL:**
+```bash
+psql -U postgres -d resume_optimizer -c "\COPY (SELECT id, email, full_name, plan, is_active, created_at FROM users) TO 'exports/users.csv' CSV HEADER"
+psql -U postgres -d resume_optimizer -c "\COPY (SELECT id, user_id, event_name, page, created_at FROM events) TO 'exports/events.csv' CSV HEADER"
+psql -U postgres -d resume_optimizer -c "\COPY (SELECT id, user_id, feedback_text, rating, sentiment, sentiment_score, category, created_at FROM feedback) TO 'exports/feedback.csv' CSV HEADER"
+psql -U postgres -d resume_optimizer -c "\COPY (SELECT id, user_id, session_start, duration_seconds, device, source FROM sessions) TO 'exports/sessions.csv' CSV HEADER"
+psql -U postgres -d resume_optimizer -c "\COPY (SELECT id, user_id, plan, status, amount_paid FROM subscriptions) TO 'exports/subscriptions.csv' CSV HEADER"
+python -m analytics.churn.predict
+copy analytics\churn\churn_scores.csv exports\churn_scores.csv
+```
+
+**2. In Power BI Desktop:**
+- Click `Home` → `Refresh`
+- All 6 pages update automatically
+
+### File
+The dashboard file `resume_optimizer.pbix` is available in the repository root.
 
 ## Known Limitations
 
