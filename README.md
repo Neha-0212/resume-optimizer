@@ -265,7 +265,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 1 — Executive Overview
 
-![Executive Overview](screenshots/executive_overview/executive_overview.jpg)
+![Executive Overview](screenshots/executive_overview.jpg)
 
 > A single-screen summary of the product's health. Built for stakeholders who need the full picture in under 30 seconds without drilling into individual reports.
 
@@ -281,7 +281,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 2 — Acquisition
 
-![Acquisition](screenshots/acquisition/acquisition.jpg)
+![Acquisition](screenshots/acquisition.jpg)
 
 > Tracks where users are coming from and how they arrive. Answers the question: which channels are actually working?
 
@@ -297,7 +297,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 3 — Funnel
 
-![Funnel](screenshots/funnel/funnel.jpg)
+![Funnel](screenshots/funnel_anlaysis.jpg)
 
 > Maps the user journey from signup to premium click. Identifies exactly where users drop off and how many make it through each stage.
 
@@ -315,7 +315,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 4 — Retention
 
-![Retention](screenshots/retention/retention.jpg)
+![Retention](screenshots/retention.jpg)
 
 > Measures how often users come back after their first visit. Retention is the single most important signal of product-market fit.
 
@@ -331,7 +331,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 5 — Feedback
 
-![Feedback](screenshots/feedback/feedback.jpg)
+![Feedback](screenshots/feedback.jpg)
 
 > Turns unstructured user text into structured product intelligence. Shows what users love, what frustrates them, and how sentiment changes over time.
 
@@ -349,7 +349,7 @@ The dashboard connects to exported CSV files from PostgreSQL and contains 6 page
 
 #### Page 6 — Churn
 
-![Churn](screenshots/churn/churn.jpg)
+![Churn](screenshots/churn_analysis.jpg)
 
 > Shows which users are at risk of leaving and how confident the model is about each prediction. Built to support proactive retention interventions.
 
